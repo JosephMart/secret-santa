@@ -1,3 +1,10 @@
+/* purgecss start ignore */
+/* Setup based of here: https://medium.com/better-programming/how-to-set-up-next-js-with-tailwind-css-b93ccd2d4164 */
+@tailwind  base;
+@tailwind  components;
+/* purgecss end ignore */
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
