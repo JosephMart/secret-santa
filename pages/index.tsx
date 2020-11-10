@@ -1,15 +1,31 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+
+import styles from "../styles/Home.module.css";
+import SantaForm from "./components/SantaForm";
 
 export default function Home() {
   return (
-    <div className='md:flex bg-white rounded-lg p-24 justify-center'>
-    <div className='text-center md:text-left'>
-      <h2 className='text-lg'>Joseph</h2>
-      <div className='text-purple-500'>Cool dev</div>
-      <div className='text-gray-600'>Twitter: @nbahoopstar05</div>
-      <div className='text-gray-600'>r0s.io</div>
+    <div className={styles.container}>
+      <Head>
+        <title>Secret Santa Generator</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <header className={styles.header}>
+        <Image
+          src="/santa-hat.svg"
+          alt="Picture of the author"
+          width={400}
+          height={400}
+        />
+
+        <h1 className={styles.input}>&#0040;Secret Santa Generator&#0041;</h1>
+        <button className={styles.submitButton}>Generate</button>
+      </header>
+
+      <main>
+        <SantaForm />
+      </main>
     </div>
-  </div>
-  )
+  );
 }

@@ -1,15 +1,15 @@
-/* purgecss start ignore */
-/* Setup based of here: https://medium.com/better-programming/how-to-set-up-next-js-with-tailwind-css-b93ccd2d4164 */
-@tailwind  base;
-@tailwind  components;
-/* purgecss end ignore */
-@tailwind utilities;
+@font-face {
+  font-family: 'WarmSnow';
+  src: local('WarmSnow'), url(/WarmSnow.otf) format('opentype');
+}
 
 html,
 body {
-  padding: 0;
+  background-color: #32cd32;
+  padding: 1em;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  color: white;
+  font-family: WarmSnow, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -20,4 +20,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3.5em;
 }
