@@ -1,0 +1,50 @@
+.SantaForm {
+  display: table;
+  width: 100%;
+}
+
+.SantaForm > * {
+  display: table-row;
+}
+
+.row {
+  /* width: 100%; */
+  /* display: flex; */
+  /* flex: 1; */
+  /* flex-direction: row; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* align-content: center; */
+  text-align: center;
+}
+
+/* .col { */
+
+/* } */
+
+.col {
+  display: table-cell;
+}
+.select {
+  width: 33%;
+}
+
+.inputText {
+  width: 80%;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  border: 0;
+  outline: 0;
+  /* height: 1.2em; */
+  background-color: transparent;
+  padding: 0.4em;
+  font-family: 'WarmSnow', 'sans-serif';
+  border-bottom: solid 1px white;
+  transition: border-color 0.1s ease;
+}
+
+.inputText:active, .inputText:focus {
+  border-bottom: solid 2px blue;
+
+}
