@@ -1,11 +1,4 @@
 import styles from "../../styles/SantaForm.module.css";
-import Select from "react-select";
-
-const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
-];
 
 export default function SantaForm() {
   return (
@@ -31,7 +24,6 @@ export default function SantaForm() {
           <input className={styles.inputText} type="text" />
         </div>
         <div className={styles.col + " " + styles.select}>
-          {/* <Select id="31" options={options} isMulti /> */}
           <select name="pets" id="pet-select" multiple>
             <option value="">--Please choose an option--</option>
             <option value="dog">Dog</option>
