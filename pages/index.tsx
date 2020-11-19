@@ -1,11 +1,35 @@
 import Head from "next/head";
 import Image from "next/image";
+import {
+  Flex,
+  View,
+  Provider,
+  defaultTheme,
+  Button,
+  Picker,
+  Section,
+  Item,
+} from "@adobe/react-spectrum";
 
 import styles from "../styles/Home.module.css";
 import SantaForm from "./components/SantaForm";
 
+let sections = [
+  {
+    name: "Animals",
+    children: [{ name: "Aardvark" }, { name: "Kangaroo" }, { name: "Snake" }],
+  },
+  {
+    name: "People",
+    children: [{ name: "Danni" }, { name: "Devon" }, { name: "Ross" }],
+  },
+];
+
 export default function Home() {
+  console.log(defaultTheme);
+  console.log(styles.container);
   return (
+    // <Provider theme={defaultTheme} colorScheme="dark">
     <div className={styles.container}>
       <Head>
         <title>Secret Santa Generator</title>
@@ -24,8 +48,20 @@ export default function Home() {
       </header>
 
       <main>
+        <Picker label="Items" items={sections}>
+          {(section) => (
+            <Section
+              key={section.name}
+              items={section.children}
+              title={section.name}
+            >
+              {(item) => <Item key={item.name}>{item.name}</Item>}
+            </Section>
+          )}
+        </Picker>
         <SantaForm />
       </main>
     </div>
+    // </Provider>
   );
 }
