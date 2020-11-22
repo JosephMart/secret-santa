@@ -1,16 +1,16 @@
 @font-face {
-  font-family: 'WarmSnow';
-  src: local('WarmSnow'), url(/WarmSnow.otf) format('opentype');
+  font-family: "WarmSnow";
+  src: local("WarmSnow"), url(/WarmSnow.otf) format("opentype");
 }
 
 html,
 body {
-  background-color: #32cd32;
+  background-color: #146b3a;
   padding: 1em;
   margin: 0;
   color: white;
-  font-family: WarmSnow, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: WarmSnow, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
